@@ -44,6 +44,10 @@ for (let type of ['node', 'browser']) {
       }
     })
 
+    test(`has 21 symbols by default`, () => {
+      equal(nanoid().length, 21)
+    })
+
     test(`changes ID length`, () => {
       equal(nanoid(10).length, 10)
     })
